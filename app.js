@@ -3,13 +3,17 @@ var express = require('express');
 var path = require('path');
 
 require('dotenv').config();
-const cors = require('cors');
+// const cors = require('cors');
 
 var indexRouter = require('./routes/index');
 
 var app = express();
+
+// view engine setup
+app.set('view engine', 'jade');
+
 //CORS
-app.use(cors());
+// app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -37,7 +41,7 @@ app.use(function(err, req, res, next) {
 
 //Escuchar peticiones
 app.listen(process.env.PORT || 4000, () => {
-  console.log(`Servidor corriendo en: http://localhost:${process.env.PORT}/`)
+  console.log(`Servidor corriendo en: ${process.env.ENVIRONMENT}/`)
 });
 
 module.exports = app;
