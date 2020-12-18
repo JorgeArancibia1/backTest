@@ -6,6 +6,7 @@ const getProducts = async (req, res) => {
 	res.status(200).json({
 		ok: true,
 		data,
+    fullImage: data[0].fullImage
 	});
 };
 
