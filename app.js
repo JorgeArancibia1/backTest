@@ -19,7 +19,7 @@ app.use(function (req, res, next) {
 
 //CORS
 app.use(
-	cors()
+	cors({ origin: true, credentials: true  })
 );
 
 app.use(express.json());

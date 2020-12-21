@@ -5,10 +5,12 @@ const getProducts = async (req, res) => {
 		`https://simple.ripley.cl/api/v2/products?format=json&partNumbers=2000379450763`,
 		{
 			headers: {
-				Authorization: "simple.ripley.cl"
-			},
+        'Access-Control-Allow-Origin': '*',
+        "Content-Type": "application/json",
+        "Authorization": "simple.ripley.cl"
+    }
 		}
-  );
+    );
 
 	if (!data) {
 		res.status(403).json({
