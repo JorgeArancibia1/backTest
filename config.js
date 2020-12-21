@@ -2,6 +2,7 @@ const whiteList = [
 	"http://localhost:3000",
 	"http://localhost:4000",
   "https://back-ripley.herokuapp.com",
+  "https://back-ripley.herokuapp.com/api/products",
   "https://simple.ripley.cl/api/v2/products?format=json&partNumbers=2000379450763"
 ]
 
