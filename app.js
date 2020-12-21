@@ -1,7 +1,7 @@
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
-const { corsOptions } = require('./config');
+// const { corsOptions } = require('./config');
 
 require("dotenv").config();
 const cors = require("cors");
@@ -19,7 +19,7 @@ app.use(function (req, res, next) {
 
 //CORS
 app.use(
-	cors(corsOptions)
+	cors()
 );
 
 app.use(express.json());
