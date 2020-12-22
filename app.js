@@ -1,27 +1,14 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-// const { corsOptions } = require('./config');
+const createError = require("http-errors");
+const express = require("express");
+const path = require("path");
+const cors = require("cors");
+const indexRouter = require("./routes/index");
 
 require("dotenv").config();
-const cors = require("cors");
 
-var indexRouter = require("./routes/index");
+const app = express();
 
-var app = express();
-
-// app.use(function (req, res, next) {
-// 	res.header("Access-Control-Allow-Origin", "*");
-// 	res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-// 	res.header("Access-Control-Allow-Headers", "Content-Type");
-// 	next();
-// });
-
-//CORS
-app.use(
-	cors()
-);
-
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/", express.static(path.join(__dirname, "public")));
