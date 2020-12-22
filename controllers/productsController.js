@@ -27,8 +27,8 @@ const getProducts = async (req, res) => {
 			headers: {
 				"Access-Control-Allow-Origin": "*",
 				"Content-Type": "application/json",
-				Authorization: "simple.ripley.cl",
-				Accept: "application/json",
+				"Authorization": "simple.ripley.cl",
+				"Accept": "application/json",
 			},
 		}
 	);
