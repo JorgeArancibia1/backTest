@@ -8,10 +8,7 @@ const getProducts = async (req, res) => {
 			`https://simple.ripley.cl/api/v2/products?format=json&partNumbers=2000379450763`,
 			{
 				headers: {
-					"Access-Control-Allow-Origin": "*",
 					"Content-Type": "application/json",
-					Authorization: "simple.ripley.cl",
-					Accept: "application/json",
 				},
 			}
 		);
