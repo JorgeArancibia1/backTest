@@ -13,6 +13,7 @@ const getProducts = async (req, res) => {
 			}
 		);
 
+    console.log(data)
 		console.log("After ");
 
 		if (!data) {
