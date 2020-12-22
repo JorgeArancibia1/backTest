@@ -1,8 +1,6 @@
 const axios = require("axios");
 
 const getProducts = async (req, res) => {
-	console.log("Entró ");
-
 	try {
 		const { data } = await axios.get(
 			`https://simple.ripley.cl/api/v2/products?format=json&partNumbers=2000379450763`,
@@ -12,9 +10,6 @@ const getProducts = async (req, res) => {
 				},
 			}
 		);
-
-    console.log(data)
-		console.log("After ");
 
 		if (!data) {
 			res.status(403).json({
@@ -33,7 +28,6 @@ const getProducts = async (req, res) => {
 		});
 	} catch (error) {
     console.log(error)
-    
     res.status(500).json({
       ok: false,
       error: "Error en el servicio.",

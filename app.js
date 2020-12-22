@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 
 //Escuchar peticiones
 app.listen(process.env.PORT || 4000, () => {
-	console.log(`Servidor corriendo en: ${process.env.REACT_APP_ENVIRONMENT}/`);
+	console.log(`Servidor corriendo en: ${process.env.REACT_APP_ENVIRONMENT}`);
 });
 
 module.exports = app;
